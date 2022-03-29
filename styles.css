@@ -1,0 +1,74 @@
+body{
+    background-image: linear-gradient(khaki, darkolivegreen);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+h1{
+    font-family: 'Bungee Shade';
+    font-size: 15vh;
+}
+
+form{
+    margin: 10px;
+}
+
+#todo-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.labels{
+    font-family: 'Bungee';
+    font-size: 4.7vh;
+    word-spacing: 1vh;
+}
+
+.buttons{
+    font-family: 'Bungee';
+    font-size: 2.3vh;
+    border-radius: 1vh;
+
+}
+
+#completedButton{
+    background-color:lightslategrey;
+}
+
+#removeAllButton{
+    background-color:sienna;
+}
+
+#buttons-area{
+    margin-top: 5px;
+    width: 72vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input{
+    font-family: 'Bungee Hairline';
+    font-size: 4.7vh;
+    word-spacing: 1vh; 
+}
+
+#submitButton{
+    background-color: burlywood;
+}
+
+#todo-list-div{
+    width: 75vh;
+}
+
+li{
+    font-family: 'Bungee Hairline';
+    font-size: 4.7vh;
+    word-spacing: 1vh;
+    width: 70vh;
+    margin-left: -3vh;
+    font-weight:bolder; 
+}

@@ -24,29 +24,33 @@ todoList.addEventListener('click', function(event){
             event.target.style.textDecorationLine = 'none';
             let index = completedTasks.indexOf(event.target.innerText);
             completedTasks.splice(index, 1);
-            console.log(completedTasks);
+            console.log(completedTasks)
         } else {
             event.target.style.textDecorationLine = 'line-through'
             completedTasks.push(event.target.innerText);
-            console.log(completedTasks);
+            console.log(completedTasks)
         }
     }
 });
 
 completedButton.addEventListener('click', function(){
+    console.log(listItems);
     for (let i = 0; i < completedTasks.length; i++){
         let listItem = document.querySelector(`#${completedTasks[i]}`);
         listItem.remove();
-        let index = listItems.indexOf(listItem);
+        console.log(listItem.innerText);
+        let index = listItems.indexOf(listItem.innerText);
         listItems.slice(index,1);
+        console.log(listItems);
     }
     completedTasks = [];
 });
 
 removeAllButton.addEventListener('click', function(){
+    console.log(listItems);
     for (let i = 0; i < listItems.length; i++){
         let item = document.querySelector('.todo-item');
-        console.log(item);
+        console.log(item)
         item.remove();
     }
     completedTasks = [];

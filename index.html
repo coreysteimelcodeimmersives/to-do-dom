@@ -5,28 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bungee' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bungee Hairline' rel='stylesheet'>
     <title>Todo App</title>
 </head>
 <body>
-    <h1>Todo App</h1>
-
-    <form>
-        <div id='todo-input'>
-            <label>Add to your todo list!</label>
-            <input type="text" autocomplete="off">
-            <div>
-                    <input type="submit">            
-            </div> 
+    <div>
+        <h1>Todo App</h1>
+    </div>
+    <div>
+        <form>
+            <div id='todo-input'>
+                <label class='labels'>Add to your todo list!</label>
+                <input type="text" autocomplete="off" placeholder="Item"> 
+            </div>
+            <div id='buttons-area'>
+                <input type="submit" class='buttons' id='submitButton'>  
+                <button class='buttons' id='completedButton'>Remove Completed Tasks</button>
+                <button class='buttons' id='removeAllButton'>Remove All</button>           
         </div>
-    </form>
-    <div id='buttons'>
-        <button id='completedButton'>Remove Completed Tasks</button>
-        <button id='removeAllButton'>Remove All</button>    
+        </form>
     </div>
     <div id='todo-list-div'>
         <ul id='todo-ul'></ul>
     </div>
-   
     <script src='main.js'></script>
 </body>
 </html>
