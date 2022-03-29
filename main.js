@@ -2,23 +2,54 @@ let form = document.querySelector('form');
 let inputText = document.querySelector('input');
 let todoList = document.querySelector('#todo-ul');
 let completedTasks = [];
-let completedButon = document.querySelector('#completedButon');
+let completedButton = document.querySelector('#completedButton');
+let removeAllButton = document.querySelector('#removeAllButton');
+let listItems = [];
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
     let newListItem = document.createElement('li');
     newListItem.style.listStyleType = 'none';
-    newListItem.innerText = inputText.value
+    newListItem.innerText = inputText.value;
+    newListItem.id = inputText.value;
+    newListItem.className = 'todo-item';
+    listItems.push(inputText.value);
     todoList.appendChild(newListItem);
     inputText.value = '';
-})
+});
 
 todoList.addEventListener('click', function(event){
-    console.log(event.target);
-    console.log(event.target.type)
-    if (event.target.type == 'li'){
-        console.log('in the block');
-        console.log(event.target);
+    if (event.target.className == 'todo-item'){
+        if (event.target.style.textDecorationLine === 'line-through'){
+            event.target.style.textDecorationLine = 'none';
+            let index = completedTasks.indexOf(event.target.innerText);
+            completedTasks.splice(index, 1);
+            console.log(completedTasks);
+        } else {
+            event.target.style.textDecorationLine = 'line-through'
+            completedTasks.push(event.target.innerText);
+            console.log(completedTasks);
+        }
     }
+});
+
+completedButton.addEventListener('click', function(){
+    for (let i = 0; i < completedTasks.length; i++){
+        let listItem = document.querySelector(`#${completedTasks[i]}`);
+        listItem.remove();
+        let index = listItems.indexOf(listItem);
+        listItems.slice(index,1);
+    }
+    completedTasks = [];
+});
+
+removeAllButton.addEventListener('click', function(){
+    for (let i = 0; i < listItems.length; i++){
+        let item = document.querySelector('.todo-item');
+        console.log(item);
+        item.remove();
+    }
+    completedTasks = [];
+    listItems = [];
 })
 
