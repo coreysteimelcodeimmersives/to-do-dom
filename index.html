@@ -11,25 +11,29 @@
     <title>Todo App</title>
 </head>
 <body>
-    <div>
-        <h1>Todo App</h1>
-    </div>
-    <div>
-        <form>
-            <div id='todo-input'>
-                <label class='labels'>Add to your todo list!</label>
-                <input type="text" autocomplete="off" placeholder="Item"> 
-            </div>
-            <div id='buttons-area'>
-                <input type="submit" class='buttons' id='submitButton'>  
-                <button class='buttons' id='completedButton'>Remove Completed Tasks</button>
-                <button class='buttons' id='removeAllButton'>Remove All</button>           
+    <div id='todo-app'>
+        <div>
+            <h1>Todo App</h1>
         </div>
-        </form>
+        <div id='form-div'>
+            <form>
+                <div id='todo-input'>
+                    <label class='labels'>Add to your todo list!</label>
+                    <input type="text" autocomplete="off" placeholder="Item"> 
+                </div>
+                <div class="buttons-area">
+                    <input type="submit" class='buttons' id='submitButton'>   
+                    <button class='buttons' id='completedButton'>Remove Completed Tasks</button>   
+                    <button class='buttons' id='removeAllButton'>Remove All</button>        
+            </div>
+            </form>
+            
+        </div>
+        <div id='todo-list-div'>
+            <ul id='todo-ul'></ul>
+        </div>
     </div>
-    <div id='todo-list-div'>
-        <ul id='todo-ul'></ul>
-    </div>
+    
     <script src='main.js'></script>
 </body>
 </html>
