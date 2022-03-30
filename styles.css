@@ -84,7 +84,6 @@ input{
     width: 80vw;
     display: flex;
     justify-content: center;
-    border: solid green;
 }
 
 li{
@@ -93,7 +92,7 @@ li{
     word-spacing: 1vw;
     width: 83vw;
     font-weight:bolder; 
-    /* list-style: none;     */
+    /* list-style: none;     */    
 }
 
 #form-div{

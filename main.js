@@ -7,7 +7,6 @@ let removeAllButton = document.querySelector('#removeAllButton');
 
 
 form.addEventListener('submit', function(event){
-    // console.log(event.target)
     event.preventDefault();
     if (inputText.value !== ''){
         let newListItem = document.createElement('li');
