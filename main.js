@@ -7,13 +7,15 @@ let removeAllButton = document.querySelector('#removeAllButton');
 
 
 form.addEventListener('submit', function(event){
-    console.log(event.target)
+    // console.log(event.target)
     event.preventDefault();
-    let newListItem = document.createElement('li');
-    newListItem.innerText = inputText.value;
-    todoList.appendChild(newListItem);
-    inputText.value = '';
-    
+    if (inputText.value !== ''){
+        let newListItem = document.createElement('li');
+        newListItem.innerText = inputText.value;
+        todoList.appendChild(newListItem);
+        inputText.value = '';
+        console.log('Whatever.')
+    } 
 });
 
 todoList.addEventListener('click', function(event){

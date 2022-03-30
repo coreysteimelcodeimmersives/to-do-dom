@@ -40,7 +40,7 @@ form{
 label{
     font-family: 'Bungee';
     font-size: 5vh;
-    word-spacing: 1vh;
+    word-spacing: 1vw;
     width: inherit;
     text-align: center;
 }
@@ -48,7 +48,7 @@ label{
 .buttons{
     font-family: 'Bungee';
     font-size: 2.3vh;
-    border-radius: 1vh;
+    border-radius: 1vw;
     width: fit-content;
 
 }
@@ -72,8 +72,8 @@ label{
 input{
     font-family: 'Bungee Hairline';
     font-size: 4.7vh;
-    word-spacing: 1vh;
-    width: 95vh;
+    word-spacing: 1vw;
+    width: 80vw;
 }
 
 #submitButton{
@@ -81,21 +81,21 @@ input{
 }
 
 #todo-list-div{
-    width: 75vh;
+    width: 80vw;
     display: flex;
     justify-content: center;
+    border: solid green;
 }
 
 li{
     font-family: 'Bungee Hairline';
     font-size: 4.7vh;
-    word-spacing: 1vh;
-    width: 100vh;
-    margin-left: -3vh;
+    word-spacing: 1vw;
+    width: 83vw;
     font-weight:bolder; 
-    list-style: none;    
+    /* list-style: none;     */
 }
 
 #form-div{
-    width: 100vh;
+    width: 100vw;
 }
